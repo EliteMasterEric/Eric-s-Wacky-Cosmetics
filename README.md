@@ -8,16 +8,6 @@ An addon for More Company which adds a variety of zany and interesting new cosme
 # Notice
 If playing on a save that previously had the BiggerLobby mod, you may encounter significantly more instability issues than usual. I recommend playing it safe and wiping BiggerLobby saves and making new MoreCompany ones. 
 
-# Changelog
-## 1.0.0
-- Initial release.
-- Added 5 cosmetics:
-    - Burning Flames Team Captain
-    - Maxwell
-    - OSCAR
-    - Towering Pillar of Hats
-    - Valkyrie Helm
-
 # Upcoming (Potentially)
 - Additional cosmetics.
 

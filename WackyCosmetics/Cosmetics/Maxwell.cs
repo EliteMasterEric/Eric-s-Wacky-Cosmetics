@@ -8,6 +8,7 @@ namespace WackyCosmetics.Cosmetics
         public override string cosmeticId => "wackycosmetics.maxwell";
         public override string textureIconPath => "assets/WackyCosmetics/Maxwell/Maxwell_Icon.png";
         public override string cosmeticName => "Maxwell";
+        public override string assetBundlePath => "WackyCosmetics.cosmetic_maxwell";
         
         public override CosmeticType cosmeticType => CosmeticType.HAT;
     }

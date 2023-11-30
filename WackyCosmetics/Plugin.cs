@@ -2,9 +2,7 @@
 
 using HarmonyLib;
 using BepInEx.Logging;
-using UnityEngine;
 using WackyCosmetics.Cosmetics;
-using System.ComponentModel;
 
 namespace WackyCosmetics
 {
@@ -17,6 +15,7 @@ namespace WackyCosmetics
     }
 
     [BepInPlugin(PluginInfo.PLUGIN_GUID, PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION)]
+    [BepInDependency(MoreCompany.PluginInformation.PLUGIN_GUID, BepInDependency.DependencyFlags.HardDependency)]
     public class Plugin : BaseUnityPlugin
     {
         public static Plugin Instance { get; private set; }
@@ -29,7 +28,7 @@ namespace WackyCosmetics
         {
             Instance = this;
 
-            this.PluginLogger = Logger;
+            PluginLogger = Logger;
 
             // Apply Harmony patches (if any exist)
             Harmony harmony = new Harmony(PluginInfo.PLUGIN_GUID);
@@ -38,6 +37,8 @@ namespace WackyCosmetics
             // Plugin startup logic
             PluginLogger.LogInfo($"Plugin {PluginInfo.PLUGIN_NAME} ({PluginInfo.PLUGIN_GUID}) is loaded!");
 
+            // PluginLogger.LogWarning(string.Join("\n", PluginAssets.ListEmbeddedResourcesInThisAssembly()));
+
             // Perform initialization
             LoadConfig();
             LoadCosmetics();
@@ -45,19 +46,12 @@ namespace WackyCosmetics
 
         private void LoadConfig()
         {
-            this.PluginConfig = new PluginConfig();
-            this.PluginConfig.BindConfig(this.Config);
+            PluginConfig = new PluginConfig();
+            PluginConfig.BindConfig(Config);
         }
 
         private void LoadCosmetics()
         {
-            // Sets up a callback for when LC_API.BundleAPI.BundleLoader finishes loading all assets
-            LC_API.BundleAPI.BundleLoader.OnLoadedAssets += OnLCAPILoadedAssets;
-        }
-
-        private void OnLCAPILoadedAssets()
-        {
-            // Called when all assets have been loaded by LC_API.BundleAPI.BundleLoader
             WackyCosmeticGeneric.LoadCosmeticsFromThisAssembly();
         }
     }

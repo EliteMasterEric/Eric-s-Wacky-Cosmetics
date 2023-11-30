@@ -8,6 +8,7 @@ namespace WackyCosmetics.Cosmetics
         public override string cosmeticId => "wackycosmetics.oscar";
         public override string textureIconPath => "assets/WackyCosmetics/OSCAR/OSCAR_Icon.png";
         public override string cosmeticName => "OSCAR";
+        public override string assetBundlePath => "WackyCosmetics.cosmetic_oscar";
         
         public override CosmeticType cosmeticType => CosmeticType.HAT;
     }

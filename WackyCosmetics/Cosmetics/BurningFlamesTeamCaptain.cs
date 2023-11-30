@@ -8,6 +8,7 @@ namespace WackyCosmetics.Cosmetics
         public override string cosmeticId => "wackycosmetics.burningflamesteamcaptain";
         public override string textureIconPath => "assets/WackyCosmetics/BurningFlamesTeamCaptain/BurningFlamesTeamCaptain_Icon.png";
         public override string cosmeticName => "Burning Flames Team Captain";
+        public override string assetBundlePath => "WackyCosmetics.cosmetic_burningflamesteamcaptain";
 
         public override CosmeticType cosmeticType => CosmeticType.HAT;
     }

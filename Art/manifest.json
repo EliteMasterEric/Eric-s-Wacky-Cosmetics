@@ -1,10 +1,9 @@
 {
     "name": "WackyCosmetics",
-    "version_number": "1.0.0",
+    "version_number": "1.1.0",
     "website_url": "https://github.com/EliteMasterEric/Wacky-Cosmetics",
     "description": "A cosmetics addon for MoreCompany.",
     "dependencies": [
-		  "notnotnotswipez-MoreCompany-1.4.2",
-      "2018-LC_API-1.4.2"
+		  "notnotnotswipez-MoreCompany-1.5.1"
     ]
 }
